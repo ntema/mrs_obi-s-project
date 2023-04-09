@@ -1,0 +1,39 @@
+{
+  "name": "lantern-app-api",
+  "version": "1.0.0",
+  "description": "Finance saving, management and scheduling app",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server",
+    "start": "node src/server"
+  },
+  "author": "Ebi Agbiki",
+  "license": "MIT",
+  "dependencies": {
+    "@joi/date": "^2.1.0",
+    "axios": "^1.3.3",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "flutterwave-node-v3": "^1.0.12",
+    "handlebars": "^4.7.7",
+    "html5-qrcode": "^2.3.7",
+    "jimp": "^0.22.7",
+    "joi": "^17.7.1",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.9.1",
+    "node-cron": "^3.0.2",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^6.9.1",
+    "otp-generator": "^4.0.1",
+    "qrcode": "^1.5.1",
+    "qrcode-reader": "^1.0.4",
+    "redis": "^4.6.5",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
