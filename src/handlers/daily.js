@@ -8,9 +8,9 @@ module.exports = async (req, res, next) => {
     console.log("schedule is currently running at the background");    
     const users = await User.find({});
     for (let user in users) {
-      const schedules = await Schedule.find({ email: user.email });
+      const schedules = await Schedule.find({ email: user.email,isFulfilled:false });
       for(let i = 0; i< schedules.length; i ++) {
-        if (schedules[i].isFulfilled !== true && schedules[i].period === "daily") {
+        if (schedules[i].period === "daily") {
           const todays_date = new Date() + "";
           if (todays_date === schedules[i].stop_date) {
             console.log("daily schedule ",schedules[i].period === "daily")
@@ -46,7 +46,7 @@ module.exports = async (req, res, next) => {
           if (schedules[i].stop_date === todays_date) {
             const user = await schedules[i].updateMany(
               {},
-              { isFullfilled: "true" },
+              { isFullfilled: "true"},
               { new: true }
             );
             console.log(

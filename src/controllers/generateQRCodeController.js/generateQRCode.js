@@ -28,7 +28,7 @@ module.exports.L2L_transfer_via_QRcode = async (req, res, next) => {
     if (value.amount === null || value.amount === " ") {
       return res.status(400).json({
         status: "error",
-        data: "please provide an amount for payment",
+        data: "please provide a valid amount for payment",
       });
     }
     if (wallet.amount < value.amount) {
